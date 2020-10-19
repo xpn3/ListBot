@@ -1,6 +1,6 @@
 const { tableName } = require('../config.json');
 const SQLite = require("better-sqlite3");
-const db = new SQLite('./' + tableName + '.sqlite');
+const db = new SQLite('data/' + tableName + '.sqlite');
 
 function parseArguments(args) {
   var alias = args[0];
@@ -19,7 +19,7 @@ async function createList(channel, title, alias) {
 }
 
 module.exports = {
-	name: 'new',
+  name: 'new',
   description: 'Creates a new list.',
   args: true,
   usage: '<list-alias> <list-title>',

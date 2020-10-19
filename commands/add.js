@@ -1,6 +1,6 @@
 const { tableName } = require('../config.json');
 const SQLite = require("better-sqlite3");
-const db = new SQLite('./' + tableName + '.sqlite');
+const db = new SQLite('data/' + tableName + '.sqlite');
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -27,7 +27,7 @@ async function addEntry(message, newEntry) {
 }
 
 module.exports = {
-	name: 'add',
+  name: 'add',
   description: 'Adds a new entry to an existing list.',
   args: true,
   //guildOnly: true,

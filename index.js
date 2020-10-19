@@ -13,7 +13,7 @@ client.commands = new Discord.Collection();
 const fs = require('fs');
 
 const SQLite = require("better-sqlite3");
-const db = new SQLite('./' + tableName + '.sqlite');
+const db = new SQLite('data/' + tableName + '.sqlite');
 
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
